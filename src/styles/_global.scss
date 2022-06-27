@@ -1,0 +1,50 @@
+@use './colors' as *;
+
+:root {
+  /* Font families */
+  --hgw-font-family: 'ArchitectsDaughter', sans-serif;
+
+  /* background-color */
+  --hgw-background-primary: #{$azure-radiance};
+  --hgw-background-secondary: #{$jelly-bean};
+
+  /* Header styling */
+  --hgw-header-height: 6rem;
+  --hgw-header-background-color: var(--hgw-color-light);
+
+  /* Footer styling */
+  --hgw-footer-height: 3.5rem;
+  --hgw-footer-background-color: var(--hgw-color-light);
+
+  /* Inner Page styling */
+  --hgw-inner-margin: 0 2rem;
+
+  /* Background coloring */
+  --hgw-background-color: var(--hgw-color-light);
+
+  /* Ripple coloring */
+  --hgw-ripple-color: var(--hgw-ripple-color-light);
+  --hgw-ripple-color-light: var(--hgw-color-light);
+  --hgw-ripple-color-dark: var(--hgw-color-gray);
+
+  /* Ripple styling */
+  --hgw-ripple-speed: var(--hgw-ripple-speed-normal);
+  --hgw-ripple-speed-slow: 1s;
+  --hgw-ripple-speed-normal: 0.5s;
+  --hgw-ripple-speed-fast: 0.25s;
+
+  /* Color palette */
+  --hgw-color-light: #{$white};
+  --hgw-color-gray: #{$gray};
+  --hgw-color-black: #{$black};
+
+  --hgw-color-info: #{$azure-radiance};
+  --hgw-color-caution: #{$yellow};
+  --hgw-color-warning: #{$orange};
+  --hgw-color-danger: #{$persian-red};
+  --hgw-color-success: #{$green-hill};
+
+  /* Color aliases */
+  --hgw-color-primary: var(--hgw-color-info);
+  --hgw-color-accent: var(--hgw-color-success);
+}
