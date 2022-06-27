@@ -1,6 +1,13 @@
 @use './colors' as *;
 
 :root {
+  /* Font families */
+  --hgw-font-family: 'ArchitectsDaughter', sans-serif;
+
+  /* background-color */
+  --hgw-background-primary: #{$azure-radiance};
+  --hgw-background-secondary: #{$jelly-bean};
+
   /* Header styling */
   --hgw-header-height: 6rem;
   --hgw-header-background-color: var(--hgw-color-light);
