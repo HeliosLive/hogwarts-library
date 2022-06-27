@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  justify-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(var(--hgw-card-size), auto));
+  grid-gap: 1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

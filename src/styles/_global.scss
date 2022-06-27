@@ -4,10 +4,6 @@
   /* Font families */
   --hgw-font-family: 'ArchitectsDaughter', sans-serif;
 
-  /* background-color */
-  --hgw-background-primary: #{$azure-radiance};
-  --hgw-background-secondary: #{$jelly-bean};
-
   /* Header styling */
   --hgw-header-height: 6rem;
   --hgw-header-background-color: var(--hgw-color-light);
@@ -17,13 +13,14 @@
   --hgw-footer-background-color: var(--hgw-color-light);
 
   /* Inner Page styling */
-  --hgw-inner-margin: 0 2rem;
+  --hgw-inner-height: 2rem;
+  --hgw-inner-margin: var(--hgw-inner-height) 0.5rem;
 
   /* Background coloring */
   --hgw-background-color: var(--hgw-color-light);
 
   /* Card styling */
-  --hgw-card-size: 100px;
+  --hgw-card-size: 7rem;
 
   /* Card coloring */
   --hgw-card-visible-page-background-color: #fafafa;

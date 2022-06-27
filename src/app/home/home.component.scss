@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+
+  app-bookshelf {
+    flex-grow: 1;
+    overflow: auto;
+    padding-left: var(--hgw-card-size);
+    height: calc(100vh - var(--hgw-inner-height));
+  }
+}
