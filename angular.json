@@ -83,5 +83,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "hogwarts-library"
 }

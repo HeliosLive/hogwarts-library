@@ -22,6 +22,16 @@
   /* Background coloring */
   --hgw-background-color: var(--hgw-color-light);
 
+  /* Card styling */
+  --hgw-card-size: 100px;
+
+  /* Card coloring */
+  --hgw-card-visible-page-background-color: #fafafa;
+  --hgw-card-ghost-page-background-color: #f5f5f5;
+  --hgw-card-invisible-page-background-color: #efefef;
+  --hgw-card-hidden-page-background-color: #e8e6e6;
+  --hgw-card-background-color: #{$midnight-blue};
+
   /* Ripple coloring */
   --hgw-ripple-color: var(--hgw-ripple-color-light);
   --hgw-ripple-color-light: var(--hgw-color-light);
