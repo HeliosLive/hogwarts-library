@@ -22,5 +22,5 @@ module.exports = {
         '!**/*.config.ts'
     ],
     testPathIgnorePatterns: ['/node_modules/', '/src/environments/'],
-    moduleDirectories: ['.', 'src', 'node_modules'],
+    moduleDirectories: ['node_modules', __dirname],
 };

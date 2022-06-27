@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: calc(var(--vh, 1vh) * 100);
+  grid-template-areas:
+    'header'
+    'body'
+    'footer';
+
+  .header {
+    grid-area: header;
+  }
+
+  .body {
+    grid-area: body;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
