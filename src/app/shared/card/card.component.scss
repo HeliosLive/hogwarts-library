@@ -52,7 +52,16 @@
   }
 
   .odd {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     border-left: 2px groove #c3bfbf5c;
+
+    img {
+      width: 80%;
+      border-radius: 0 0 20% 20%;
+    }
+
     & > * {
       transform: rotateY(180deg);
     }
