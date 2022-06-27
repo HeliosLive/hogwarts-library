@@ -1,0 +1,92 @@
+:host {
+  position: relative;
+  height: var(--hgw-card-size);
+  width: var(--hgw-card-size);
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  cursor: pointer;
+
+  &[data-status='active'] {
+    .front,
+    .page {
+      box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+    }
+
+    $surfaces: front, back, page1, page2, page3, page4, page5, page6, page7,
+      page8;
+    @each $surface in $surfaces {
+      $i: index($surfaces, $surface);
+      --rotate-degree-#{$i}: #{($i * 3.5)}deg;
+
+      @if $i % 2 == 0 {
+        .#{$surface} {
+          transform: rotateY(calc((var(--rotate-degree-#{$i})) * -1));
+        }
+      }
+      @if $i % 2 == 1 {
+        .#{$surface} {
+          transform: rotateY(calc(var(--rotate-degree-#{$i}) - 180deg));
+        }
+      }
+    }
+  }
+
+  .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hgw-color-warning);
+    background: var(--hgw-card-background-color);
+  }
+
+  .cover,
+  .page {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+    transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
+  }
+
+  .odd {
+    border-left: 2px groove #c3bfbf5c;
+    & > * {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .front,
+  .odd {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+  .back,
+  .even {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+  .page1,
+  .page2 {
+    background-color: var(--hgw-card-hidden-page-background-color);
+  }
+
+  .page3,
+  .page4 {
+    background-color: var(--hgw-card-invisible-page-background-color);
+  }
+
+  .page5,
+  .page6 {
+    background-color: var(--hgw-card-ghost-page-background-color);
+  }
+
+  .page7,
+  .page8 {
+    background-color: var(--hgw-card-visible-page-background-color);
+  }
+}

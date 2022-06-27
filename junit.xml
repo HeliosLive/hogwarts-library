@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="6.459">
-  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-27T16:24:24" time="5.768" tests="1">
-    <testcase classname="AppComponent should create" name="AppComponent should create" time="0.026">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="3.075">
+  <testsuite name="CardComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-27T20:04:28" time="2.394" tests="4">
+    <testcase classname="CardComponent should create" name="CardComponent should create" time="0.034">
+    </testcase>
+    <testcase classname="CardComponent onClick should call the method itself after the click" name="CardComponent onClick should call the method itself after the click" time="0.014">
+    </testcase>
+    <testcase classname="CardComponent onClick should set the `active` value to the status in dataset of element on first click" name="CardComponent onClick should set the `active` value to the status in dataset of element on first click" time="0.02">
+    </testcase>
+    <testcase classname="CardComponent onClick should remove the status dataset of element after the second click" name="CardComponent onClick should remove the status dataset of element after the second click" time="0.014">
     </testcase>
   </testsuite>
 </testsuites>

@@ -12,8 +12,12 @@
   }
 
   .body {
-    grid-area: body;
     overflow: auto;
+    display: grid;
+    justify-items: center;
+    grid-area: body;
+    grid-template-columns: repeat(auto-fit, minmax(var(--hgw-card-size), auto));
+    grid-gap: 1rem;
 
     &::-webkit-scrollbar {
       display: none;
