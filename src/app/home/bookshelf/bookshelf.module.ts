@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BookshelfComponent } from './bookshelf.component';
 
-import { HGWCardModule } from '@shared/card/card.module';
+import { HGWCardModule } from '@shared/components/card/card.module';
 
 @NgModule({
   declarations: [BookshelfComponent],

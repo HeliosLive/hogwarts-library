@@ -1,3 +1,57 @@
 :host {
-  color: aliceblue;
+  display: grid;
+  justify-items: center;
+  align-content: space-evenly;
+  width: max(15%, 7rem);
+  height: calc(calc(var(--vh, 1vh) * 95) - var(--hgw-inner-height));
+  color: var(--hgw-color-soft);
+  background: var(--hgw-color-vintage);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
+
+  ol {
+    width: 100%;
+    padding: 0;
+    overflow: auto;
+    text-align: center;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  $ribbon: var(--hgw-color-info);
+  $tail: var(--hgw-color-danger);
+
+  h1 {
+    transform-style: preserve-3d;
+    transform: rotate(-20deg) skew(-20deg, 10deg);
+    background: $ribbon;
+
+    &:before {
+      left: -2em;
+      top: 0.5em;
+      border-color: $ribbon $tail $ribbon $ribbon;
+    }
+
+    &:after {
+      right: -2em;
+      top: -0.5em;
+      border-color: $ribbon $ribbon $ribbon $tail;
+    }
+
+    &:before,
+    &:after {
+      opacity: 0.8;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 0.25em;
+      width: 40%;
+      background: $ribbon;
+      border-style: solid;
+      border-width: 0.5em;
+      z-index: -1;
+      transform: translateZ(-1em);
+    }
+  }
 }
