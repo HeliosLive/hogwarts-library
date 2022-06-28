@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  border: none;
+  outline: none;
+  height: var(--hgw-button-height);
+  border-radius: var(--hgw-button-border-radius);
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:not(.hgw-button-disabled) {
+    color: var(--hgw-button-color);
+  }
+
+  &[color='primary'] ::ng-deep {
+    background-color: var(--hgw-button-background-color-primary);
+  }
+
+  &[color='success'] ::ng-deep {
+    background-color: var(--hgw-button-background-color-success);
+  }
+
+  &[color='warning'] ::ng-deep {
+    background-color: var(--hgw-button-background-color-warning);
+  }
+
+  &[color='danger'] ::ng-deep {
+    background-color: var(--hgw-button-background-color-danger);
+  }
+
+  &.hgw-raised-button:not(.hgw-button-disabled) {
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  }
+
+  &.hgw-outlined-button:not(.hgw-button-disabled) {
+    color: var(--hgw-button-outlined-color);
+    background-color: transparent;
+    border: 1px solid currentColor;
+    border-color: var(--hgw-button-outlined-border-color);
+  }
+
+  &.hgw-button-disabled {
+    cursor: default;
+  }
+}
