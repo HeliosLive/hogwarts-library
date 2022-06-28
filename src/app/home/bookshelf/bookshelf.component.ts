@@ -4,6 +4,7 @@ import { take, tap } from 'rxjs';
 
 import type { Post } from '@shared/models/post.interface';
 import { PostsService } from '../services/posts.service';
+import { HistoryService } from '../services/history.service';
 
 @Component({
   selector: 'app-bookshelf',
@@ -13,7 +14,10 @@ import { PostsService } from '../services/posts.service';
 export class BookshelfComponent implements OnInit {
   posts!: Post[];
 
-  constructor(private readonly postsService: PostsService) {}
+  constructor(
+    private readonly postsService: PostsService,
+    private readonly historyService: HistoryService
+  ) {}
 
   ngOnInit(): void {
     this.postsService
@@ -23,5 +27,9 @@ export class BookshelfComponent implements OnInit {
         tap((posts: Post[]) => (this.posts = posts))
       )
       .subscribe();
+  }
+
+  onClick(post: Post): void {
+    this.historyService.set(post);
   }
 }
