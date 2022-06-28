@@ -18,6 +18,12 @@ describe('ReversePipe', () => {
   });
 
   describe('transform', () => {
+    it('should return undefined if no value has been passed', () => {
+      const response = spectator.service.transform();
+
+      expect(response).toBeUndefined();
+    });
+
     it('should return the reverse of the given array', () => {
       const value = [1, 2, 3, 4, 5];
       const expected = value.slice().reverse();

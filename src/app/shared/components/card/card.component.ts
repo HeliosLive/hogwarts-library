@@ -1,4 +1,6 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Input } from '@angular/core';
+
+import type { Post } from '@shared/models/post.interface';
 
 @Component({
   selector: 'hgw-card',
@@ -6,6 +8,8 @@ import { Component, ElementRef, HostListener } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
+  @Input() data!: Post;
+
   constructor(private elementRef: ElementRef) {}
 
   @HostListener('click', ['$event']) onClick() {

@@ -77,6 +77,12 @@
   .even {
     border-bottom-right-radius: 0.5em;
     border-top-right-radius: 0.5em;
+
+    p {
+      margin: 0;
+      word-break: break-all;
+      font-size: 0.8em;
+    }
   }
 
   .page1,

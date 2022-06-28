@@ -6,10 +6,14 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HistoryModule } from './history/history.module';
 import { BookshelfModule } from './bookshelf/bookshelf.module';
+import { PostsService } from './services/posts.service';
+import { PostsHttpService } from './services/posts-http.service';
+import { HistoryService } from './services/history.service';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [CommonModule, HomeRoutingModule, HistoryModule, BookshelfModule],
+  providers: [PostsService, PostsHttpService, HistoryService],
   exports: [HomeComponent],
 })
 export class HomeModule {}

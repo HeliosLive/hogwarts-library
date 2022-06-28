@@ -4,15 +4,25 @@
   align-content: space-evenly;
   width: max(15%, 7rem);
   height: calc(calc(var(--vh, 1vh) * 95) - var(--hgw-inner-height));
+  text-align: center;
   color: var(--hgw-color-soft);
   background: var(--hgw-color-vintage);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
+
+  h3,
+  ol {
+    height: calc(var(--vh, 1vh) * 70);
+  }
 
   ol {
     width: 100%;
     padding: 0;
     overflow: auto;
     text-align: center;
+
+    li {
+      border-bottom: 2px groove #e4d4e1;
+    }
 
     &::-webkit-scrollbar {
       display: none;

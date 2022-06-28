@@ -1,1 +1,1 @@
-<hgw-card *ngFor="let item of [].constructor(100)"></hgw-card>
+<hgw-card *ngFor="let post of posts" [data]="post" (click)="onClick(post)"></hgw-card>
