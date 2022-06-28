@@ -2,7 +2,7 @@ module.exports = {
     preset: 'jest-preset-angular',
     testEnvironment: 'jsdom',
     globals: {
-        isolatedModules: true
+        isolatedModules: true,
     },
     roots: ['src'],
     setupFilesAfterEnv: ['./src/setup-jest.ts'],
@@ -19,8 +19,12 @@ module.exports = {
         '!**/src/setupJest.ts',
         '!**/index.ts',
         '!**/*.token.ts',
-        '!**/*.config.ts'
+        '!**/*.config.ts',
     ],
     testPathIgnorePatterns: ['/node_modules/', '/src/environments/'],
     moduleDirectories: ['node_modules', __dirname],
+    moduleNameMapper: {
+        '@core/(.*)': 'src/app/core/$1',
+        '@shared/(.*)': 'src/app/shared/$1',
+    },
 };

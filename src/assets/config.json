@@ -1,0 +1,5 @@
+{
+    "apiBaseUrl": "https://jsonplaceholder.typicode.com/posts",
+    "apiVersion": "v1",
+    "environment": "localhost"
+}
