@@ -3,10 +3,19 @@
   display: grid;
   align-content: space-evenly;
   justify-items: center;
+  grid-template-areas:
+    'img img img'
+    '. button .';
+  grid-template-columns: 40% auto 40%;
   height: calc(var(--vh, 1vh) * 100);
-  width: calc(var(--vw, 1vw) * 100);
+  width: 100%;
 
   img {
-    width: 80%;
+    grid-area: img;
+    width: 100%;
+  }
+
+  button {
+    grid-area: button;
   }
 }

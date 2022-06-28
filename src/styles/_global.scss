@@ -19,6 +19,22 @@
   /* Background coloring */
   --hgw-background-color: var(--hgw-color-light);
 
+  /* Button size */
+  --hgw-button-height: 48px;
+  --hgw-button-border-radius: 4px;
+
+  /* Button styling */
+  --hgw-button-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  /* Button coloring */
+  --hgw-button-color: var(--hgw-color-light);
+  --hgw-button-outlined-color: var(--hgw-color-soft);
+  --hgw-button-outlined-border-color: var(--hgw-color-gray);
+  --hgw-button-background-color-primary: var(--hgw-color-primary);
+  --hgw-button-background-color-success: var(--hgw-color-success);
+  --hgw-button-background-color-warning: var(--hgw-color-warning);
+  --hgw-button-background-color-danger: var(--hgw-color-danger);
+
   /* Card styling */
   --hgw-card-size: 6rem;
 

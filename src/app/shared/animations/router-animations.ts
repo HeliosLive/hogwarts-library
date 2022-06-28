@@ -48,8 +48,8 @@ export const routerAnimations = trigger('routerAnimations', [
     ],
     {
       params: {
-        enterTiming: '.7',
-        leaveTiming: '.6',
+        enterTiming: '1',
+        leaveTiming: '.8',
         enterDelay: '0',
         leaveDelay: '0',
       },
