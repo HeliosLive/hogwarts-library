@@ -5,18 +5,12 @@ import { PostsService } from './posts.service';
 
 import type { Post } from '@shared/models/post.interface';
 import { PostsHttpService } from './posts-http.service';
+import { POSTS_DATA } from 'src/test/post.data';
 
 describe('PostsService', () => {
   let spectator: SpectatorService<PostsService>;
   let postsHttpService: PostsHttpService;
-  const expectedData: Post[] = [
-    {
-      id: 1,
-      userId: 2,
-      title: 'title',
-      body: 'body',
-    },
-  ];
+  const expectedData: Post[] = POSTS_DATA;
 
   const createService = createServiceFactory({
     service: PostsService,
