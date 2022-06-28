@@ -1,9 +1,11 @@
 :host {
+  position: absolute;
   display: grid;
   justify-items: center;
   align-items: center;
   align-content: space-evenly;
-  height: 100vh;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
 
   svg-icon {
     width: 50%;

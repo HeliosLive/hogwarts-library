@@ -1,10 +1,13 @@
 :host {
+  position: absolute;
   display: flex;
+  margin: var(--hgw-inner-margin);
+  width: calc(var(--vw, 1vw) * 95);
 
   app-bookshelf {
     flex-grow: 1;
     overflow: auto;
     padding-left: var(--hgw-card-size);
-    height: 95vh;
+    height: calc(var(--vh, 1vh) * 95);
   }
 }

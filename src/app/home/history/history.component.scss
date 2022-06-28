@@ -3,7 +3,7 @@
   justify-items: center;
   align-content: space-evenly;
   width: max(15%, 7rem);
-  height: calc(100vh - var(--hgw-inner-height));
+  height: calc(calc(var(--vh, 1vh) * 95) - var(--hgw-inner-height));
   color: var(--hgw-color-soft);
   background: var(--hgw-color-vintage);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
