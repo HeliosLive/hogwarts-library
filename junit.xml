@@ -1,13 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="3.874">
-  <testsuite name="HistoryComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T12:02:46" time="3.01" tests="4">
-    <testcase classname="HistoryComponent should create" name="HistoryComponent should create" time="0.043">
+<testsuites name="jest tests" tests="53" failures="0" errors="0" time="8.987">
+  <testsuite name="ApiConfigService" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.127" tests="2">
+    <testcase classname="ApiConfigService should create" name="ApiConfigService should create" time="0.021">
     </testcase>
-    <testcase classname="HistoryComponent ngOnInit should posts$ observable data equals to service response" name="HistoryComponent ngOnInit should posts$ observable data equals to service response" time="0.026">
+    <testcase classname="ApiConfigService baseUrl should return the validate endpoint url" name="ApiConfigService baseUrl should return the validate endpoint url" time="0.008">
     </testcase>
-    <testcase classname="HistoryComponent trackByFn should return the index if it is defined" name="HistoryComponent trackByFn should return the index if it is defined" time="0.015">
+  </testsuite>
+  <testsuite name="PostsHttpService" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.194" tests="2">
+    <testcase classname="PostsHttpService should create" name="PostsHttpService should create" time="0.038">
     </testcase>
-    <testcase classname="HistoryComponent trackByFn should return the item id if index is not defined" name="HistoryComponent trackByFn should return the item id if index is not defined" time="0.013">
+    <testcase classname="PostsHttpService load should make an http get request to correct endpoint" name="PostsHttpService load should make an http get request to correct endpoint" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="ReversePipe" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.214" tests="3">
+    <testcase classname="ReversePipe should create an instance" name="ReversePipe should create an instance" time="0.019">
+    </testcase>
+    <testcase classname="ReversePipe transform should return undefined if no value has been passed" name="ReversePipe transform should return undefined if no value has been passed" time="0.007">
+    </testcase>
+    <testcase classname="ReversePipe transform should return the reverse of the given array" name="ReversePipe transform should return the reverse of the given array" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="HomeComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.239" tests="1">
+    <testcase classname="HomeComponent should create" name="HomeComponent should create" time="0.053">
+    </testcase>
+  </testsuite>
+  <testsuite name="ErrorComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.253" tests="3">
+    <testcase classname="ErrorComponent should create" name="ErrorComponent should create" time="0.069">
+    </testcase>
+    <testcase classname="ErrorComponent navigate should call the method after clicking the button" name="ErrorComponent navigate should call the method after clicking the button" time="0.027">
+    </testcase>
+    <testcase classname="ErrorComponent navigate should call navigateByUrl in router with `login` after method has been triggered" name="ErrorComponent navigate should call navigateByUrl in router with `login` after method has been triggered" time="0.023">
+    </testcase>
+  </testsuite>
+  <testsuite name="HistoryService" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.405" tests="2">
+    <testcase classname="HistoryService should create" name="HistoryService should create" time="0.022">
+    </testcase>
+    <testcase classname="HistoryService getAllData should return the expected post values on a subscription" name="HistoryService getAllData should return the expected post values on a subscription" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.403" tests="2">
+    <testcase classname="AppComponent should create" name="AppComponent should create" time="0.047">
+    </testcase>
+    <testcase classname="AppComponent getRouteAnimationState should call the method if route data includes and animationState value" name="AppComponent getRouteAnimationState should call the method if route data includes and animationState value" time="0.047">
+    </testcase>
+  </testsuite>
+  <testsuite name="CardComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.431" tests="6">
+    <testcase classname="CardComponent should create" name="CardComponent should create" time="0.04">
+    </testcase>
+    <testcase classname="CardComponent props should not render the component if data input is not defined" name="CardComponent props should not render the component if data input is not defined" time="0.023">
+    </testcase>
+    <testcase classname="CardComponent props should render the component if data input is defined" name="CardComponent props should render the component if data input is defined" time="0.029">
+    </testcase>
+    <testcase classname="CardComponent onClick should call the method itself after the click" name="CardComponent onClick should call the method itself after the click" time="0.032">
+    </testcase>
+    <testcase classname="CardComponent onClick should set the `active` value to the status in dataset of element on first click" name="CardComponent onClick should set the `active` value to the status in dataset of element on first click" time="0.014">
+    </testcase>
+    <testcase classname="CardComponent onClick should remove the status dataset of element after the second click" name="CardComponent onClick should remove the status dataset of element after the second click" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.485" tests="3">
+    <testcase classname="LoginComponent should create" name="LoginComponent should create" time="0.062">
+    </testcase>
+    <testcase classname="LoginComponent navigate should call the method after clicking the button" name="LoginComponent navigate should call the method after clicking the button" time="0.03">
+    </testcase>
+    <testcase classname="LoginComponent navigate should call navigateByUrl in router with `home` after method has been triggered" name="LoginComponent navigate should call navigateByUrl in router with `home` after method has been triggered" time="0.029">
+    </testcase>
+  </testsuite>
+  <testsuite name="Directive: RippleDirective" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.562" tests="7">
+    <testcase classname="Directive: RippleDirective should create an instance" name="Directive: RippleDirective should create an instance" time="0.044">
+    </testcase>
+    <testcase classname="Directive: RippleDirective should host has ripple container class" name="Directive: RippleDirective should host has ripple container class" time="0.029">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should method itself called after click" name="Directive: RippleDirective onClick should method itself called after click" time="0.017">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" name="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" time="0.014">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" time="0.013">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" time="0.017">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" name="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" time="0.02">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="5.79" tests="11">
+    <testcase classname="Button ButtonComponentHost content projection should Host text content equals to content projection value" name="Button ButtonComponentHost content projection should Host text content equals to content projection value" time="0.042">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost selector should Host has the attr for passed selector" name="Button ButtonComponentHost selector should Host has the attr for passed selector" time="0.016">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost selector should Host has the specific class for passed selector" name="Button ButtonComponentHost selector should Host has the specific class for passed selector" time="0.011">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.017">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.017">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" name="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.017">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host hgw-button-disabled class exist if disabled input is true" name="Button ButtonComponentHost disabled should Host hgw-button-disabled class exist if disabled input is true" time="0.014">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host hgw-button-disabled class does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host hgw-button-disabled class does not exist if disabled input is false" time="0.015">
+    </testcase>
+    <testcase classname="Button ButtonComponent should create" name="Button ButtonComponent should create" time="0.016">
+    </testcase>
+    <testcase classname="Button ButtonComponent should Host color attr equals to color input" name="Button ButtonComponent should Host color attr equals to color input" time="0.013">
+    </testcase>
+    <testcase classname="Button ButtonComponent should Host data-cy attr equals to testId input" name="Button ButtonComponent should Host data-cy attr equals to testId input" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="PostsService" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="6.327" tests="2">
+    <testcase classname="PostsService should create" name="PostsService should create" time="0.011">
+    </testcase>
+    <testcase classname="PostsService fetch should data$ return the expected post values after calling the method" name="PostsService fetch should data$ return the expected post values after calling the method" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="HistoryComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="6.392" tests="4">
+    <testcase classname="HistoryComponent should create" name="HistoryComponent should create" time="0.034">
+    </testcase>
+    <testcase classname="HistoryComponent ngOnInit should posts$ observable data equals to service response" name="HistoryComponent ngOnInit should posts$ observable data equals to service response" time="0.013">
+    </testcase>
+    <testcase classname="HistoryComponent trackByFn should return the index if it is defined" name="HistoryComponent trackByFn should return the index if it is defined" time="0.008">
+    </testcase>
+    <testcase classname="HistoryComponent trackByFn should return the item id if index is not defined" name="HistoryComponent trackByFn should return the item id if index is not defined" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="BookshelfComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T16:11:37" time="6.624" tests="5">
+    <testcase classname="BookshelfComponent should create" name="BookshelfComponent should create" time="0.028">
+    </testcase>
+    <testcase classname="BookshelfComponent ngOnInit should posts data equals to what service has been returned" name="BookshelfComponent ngOnInit should posts data equals to what service has been returned" time="0.015">
+    </testcase>
+    <testcase classname="BookshelfComponent ngOnInit should hgw-card template count equals to data length" name="BookshelfComponent ngOnInit should hgw-card template count equals to data length" time="0.018">
+    </testcase>
+    <testcase classname="BookshelfComponent onClick should call the method after clicking the card element" name="BookshelfComponent onClick should call the method after clicking the card element" time="0.012">
+    </testcase>
+    <testcase classname="BookshelfComponent onClick should call the set method with given post data" name="BookshelfComponent onClick should call the set method with given post data" time="0.014">
     </testcase>
   </testsuite>
 </testsuites>

@@ -8,7 +8,7 @@ I've used [Free jsonplaceholder](https://jsonplaceholder.typicode.com/) to make 
 
 ## End User Guide
 
-- Applicaion welcomes you with the login page which has no requirements to block you for moving forward.
+- Application welcomes you with the login page which has no requirements to block you from moving forward.
 - On the home page, you'll see a bunch of books that you can click and check who belongs to.
 - Also, there is a history sidebar on the home route where you can see the last book you've checked.
 - If you try to access any other routes accidentally, you'll be redirected to the error page that you can navigate to the login page again.
