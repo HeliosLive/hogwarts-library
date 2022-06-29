@@ -49,8 +49,8 @@ Run `npm run test` to execute the unit tests via [Jest](https://jestjs.io/).
 > I've used [spectator](https://ngneat.github.io/spectator/) tool to help me get rid of all the boilerplate grunt work, leaving you with readable, sleek and streamlined unit tests.
 
 ## Coverage unit tests
-
-Run `npm run test:coverage` to execute the unit tests and collect the coverage from it.
+- Create a folder called coverage/sonarqube-report inside the directory (src,node_modules and coverage folders should be in the same directory)
+- Run `npm run test:coverage` to execute the unit tests and collect the coverage from it.
 > It is 100% right now :)
 
 # Future Improvements

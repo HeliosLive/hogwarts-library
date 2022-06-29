@@ -7,13 +7,15 @@
   grid-template-areas:
     'svg svg svg'
     '. button .';
-  grid-template-columns: 40% auto 40%;
+  grid-template-columns: calc(var(--vw, 1vw) * 25) auto calc(
+      var(--vw, 1vw) * 25
+    );
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
 
   svg-icon {
     grid-area: svg;
-    width: 50%;
+    width: calc(var(--vw, 1vw) * 75);
     box-shadow: 0px 85px 90px 20px rgb(0 0 0 / 30%);
     backdrop-filter: blur(1px);
   }

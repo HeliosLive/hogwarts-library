@@ -1,3 +1,5 @@
+import { fakeAsync, tick } from '@angular/core/testing';
+
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 import { asapScheduler, scheduled } from 'rxjs';
 
@@ -31,11 +33,14 @@ describe('PostsService', () => {
     expect(spectator.service).toBeTruthy();
   });
 
-  describe('getAllData', () => {
-    it('should return the expected post values on a subscription', () => {
-      spectator.service.getAllData().subscribe((values) => {
+  describe('fetch', () => {
+    it('should data$ return the expected post values after calling the method', fakeAsync(() => {
+      spectator.service.fetch();
+      tick();
+
+      spectator.service.data$.subscribe((values) => {
         expect(values).toEqual(expectedData);
       });
-    });
+    }));
   });
 });

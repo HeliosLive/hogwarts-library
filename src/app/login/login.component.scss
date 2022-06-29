@@ -6,13 +6,15 @@
   grid-template-areas:
     'img img img'
     '. actions .';
-  grid-template-columns: 40% auto 40%;
+  grid-template-columns: calc(var(--vw, 1vw) * 25) auto calc(
+      var(--vw, 1vw) * 25
+    );
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
 
   img {
     grid-area: img;
-    width: 100%;
+    width: 90%;
   }
 
   .actions {

@@ -6,7 +6,7 @@ import { HistoryComponent } from './history.component';
 import type { Post } from '@shared/models/post.interface';
 import { HgwReversePipeModule } from '@shared/pipes/reverse/reverse.pipe.module';
 import { HistoryService } from '../services/history.service';
-import { POSTS_DATA } from 'src/test/post.data';
+import { POST_DATA, POSTS_DATA } from 'src/test/post.data';
 
 describe('HistoryComponent', () => {
   let spectator: Spectator<HistoryComponent>;
@@ -36,6 +36,21 @@ describe('HistoryComponent', () => {
       spectator.component.posts$.subscribe((values: Post[]) => {
         expect(values).toEqual(POSTS_DATA);
       });
+    });
+  });
+
+  describe('trackByFn', () => {
+    it('should return the index if it is defined', () => {
+      const index = 2;
+      const method = spectator.component.trackByFn(index, undefined as any);
+
+      expect(method).toEqual(index);
+    });
+
+    it('should return the item id if index is not defined', () => {
+      const method = spectator.component.trackByFn(undefined as any, POST_DATA);
+
+      expect(method).toEqual(POST_DATA.id);
     });
   });
 });
