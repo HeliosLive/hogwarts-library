@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" errors="0" time="3.387">
-  <testsuite name="LoginComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-28T21:14:01" time="2.592" tests="3">
-    <testcase classname="LoginComponent should create" name="LoginComponent should create" time="0.031">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="3.874">
+  <testsuite name="HistoryComponent" errors="0" failures="0" skipped="0" timestamp="2022-06-29T12:02:46" time="3.01" tests="4">
+    <testcase classname="HistoryComponent should create" name="HistoryComponent should create" time="0.043">
     </testcase>
-    <testcase classname="LoginComponent navigate should call the method after clicking the button" name="LoginComponent navigate should call the method after clicking the button" time="0.021">
+    <testcase classname="HistoryComponent ngOnInit should posts$ observable data equals to service response" name="HistoryComponent ngOnInit should posts$ observable data equals to service response" time="0.026">
     </testcase>
-    <testcase classname="LoginComponent navigate should call navigateByUrl in router with `home` after method has been triggered" name="LoginComponent navigate should call navigateByUrl in router with `home` after method has been triggered" time="0.02">
+    <testcase classname="HistoryComponent trackByFn should return the index if it is defined" name="HistoryComponent trackByFn should return the index if it is defined" time="0.015">
+    </testcase>
+    <testcase classname="HistoryComponent trackByFn should return the item id if index is not defined" name="HistoryComponent trackByFn should return the item id if index is not defined" time="0.013">
     </testcase>
   </testsuite>
 </testsuites>

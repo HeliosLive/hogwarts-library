@@ -28,9 +28,8 @@ describe('BookshelfComponent', () => {
     postsService = spectator.inject(PostsService);
     historyService = spectator.inject(HistoryService);
 
-    postsService.getAllData = jest.fn(() =>
-      scheduled([POSTS_DATA], asapScheduler)
-    );
+    postsService.fetch = jest.fn();
+    postsService.data$ = scheduled([POSTS_DATA], asapScheduler);
     historyService.set = jest.fn();
   });
 
@@ -39,17 +38,22 @@ describe('BookshelfComponent', () => {
   });
 
   describe('ngOnInit', () => {
-    it('should posts data equals to what service has been returned', fakeAsync(() => {
+    beforeEach(() => {
       spectator.component.ngOnInit();
+      spectator.detectChanges();
+    });
+    it('should posts data equals to what service has been returned', fakeAsync(() => {
       tick();
 
-      expect(spectator.component.posts).toEqual(POSTS_DATA);
+      spectator.component.posts$.subscribe((values) => {
+        expect(values).toEqual(POSTS_DATA);
+      });
     }));
 
     it('should hgw-card template count equals to data length', fakeAsync(() => {
-      spectator.component.ngOnInit();
       tick();
 
+      spectator.component.posts$.subscribe();
       spectator.detectChanges();
 
       const cards = spectator.queryAll('hgw-card', { read: CardComponent });
@@ -62,8 +66,11 @@ describe('BookshelfComponent', () => {
     it('should call the method after clicking the card element', fakeAsync(() => {
       jest.spyOn(spectator.component, 'onClick');
       spectator.component.ngOnInit();
+      spectator.detectChanges();
+
       tick();
 
+      spectator.component.posts$.subscribe();
       spectator.detectChanges();
 
       const card = spectator.queryAll('hgw-card')[0];

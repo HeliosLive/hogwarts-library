@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   align-content: space-evenly;
-  width: max(15%, 7rem);
+  width: max(15%, 9rem);
   height: calc(calc(var(--vh, 1vh) * 95) - var(--hgw-inner-height));
   text-align: center;
   color: var(--hgw-color-soft);

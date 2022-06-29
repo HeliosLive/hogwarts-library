@@ -19,7 +19,7 @@ export class HistoryComponent implements OnInit {
     this.posts$ = this.historyService.data$;
   }
 
-  trackByFn(index: number, item: any) {
+  trackByFn(index: number, item: Post) {
     return index ?? item.id;
   }
 }
