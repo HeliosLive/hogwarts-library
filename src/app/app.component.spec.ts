@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 
 import { AppComponent } from './app.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   template: '',
@@ -45,5 +46,13 @@ describe('AppComponent', () => {
 
       expect(spectator.component.getRouteAnimationState).toHaveBeenCalled();
     });
+  });
+
+  it('should version equals to environment appVersion', () => {
+    spectator.detectChanges();
+
+    const p = spectator.query('.app-version');
+
+    expect(p).toContainText(environment.appVersion);
   });
 });

@@ -5,4 +5,12 @@
   perspective: 1200px;
   transform-style: preserve-3d;
   backface-visibility: 'hidden';
+
+  .app-version {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--hgw-color-soft);
+    font-size: 0.8rem;
+  }
 }

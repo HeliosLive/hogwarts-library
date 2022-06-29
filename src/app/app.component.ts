@@ -10,6 +10,7 @@ import {
 } from 'rxjs/operators';
 
 import { routerAnimations } from '@shared/animations/router-animations';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,8 @@ import { routerAnimations } from '@shared/animations/router-animations';
   animations: [routerAnimations],
 })
 export class AppComponent implements OnInit {
+  version = environment.appVersion;
+
   ngOnInit(): void {
     this.listenViewportHeight();
     this.listenViewportWidth();
