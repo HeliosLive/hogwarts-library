@@ -12,9 +12,14 @@ import { HistoryService } from '../services/history.service';
 })
 export class HistoryComponent implements OnInit {
   posts$!: Observable<Post[]>;
+
   constructor(private readonly historyService: HistoryService) {}
 
   ngOnInit() {
     this.posts$ = this.historyService.data$;
+  }
+
+  trackByFn(index: number, item: any) {
+    return index ?? item.id;
   }
 }

@@ -5,7 +5,7 @@
   justify-items: center;
   grid-template-areas:
     'img img img'
-    '. button .';
+    '. actions .';
   grid-template-columns: 40% auto 40%;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
@@ -15,7 +15,16 @@
     width: 100%;
   }
 
-  button {
-    grid-area: button;
+  .actions {
+    display: grid;
+    justify-items: center;
+    grid-area: actions;
+    width: 100%;
+
+    p {
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--hgw-color-soft);
+    }
   }
 }

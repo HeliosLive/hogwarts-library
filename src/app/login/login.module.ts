@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 
+import { MdoButtonModule } from '@ctrl/ngx-github-buttons';
+
 import { LoginComponent } from './login.component';
 
 import { LoginRoutingModule } from './login-routing.module';
@@ -8,7 +10,12 @@ import { HGWRippleDirectiveModule } from '@shared/directives/ripple/ripple.direc
 
 @NgModule({
   declarations: [LoginComponent],
-  imports: [LoginRoutingModule, HGWButtonModule, HGWRippleDirectiveModule],
+  imports: [
+    LoginRoutingModule,
+    MdoButtonModule,
+    HGWButtonModule,
+    HGWRippleDirectiveModule,
+  ],
   exports: [LoginComponent],
 })
 export class LoginModule {}
