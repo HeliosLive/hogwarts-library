@@ -3,7 +3,7 @@
 <ng-container *ngIf="(posts$ | async) as posts">
   <ng-container *ngIf="posts.length > 0; else emptyList">
     <ol>
-      <li *ngFor="let post of posts | hgwReverse">User Id : {{post.id}}
+      <li *ngFor="let post of posts | hgwReverse; trackBy:trackByFn">User Id : {{post.id}}
         <p>Title : {{post.title}}</p>
       </li>
     </ol>
